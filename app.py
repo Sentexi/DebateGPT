@@ -9,5 +9,5 @@ def home():
     
 @app.route('/prompt')
 def prompt():
-    prompt()
+    motion = prompt.create_motion()
     return render_template('prompt.html')
