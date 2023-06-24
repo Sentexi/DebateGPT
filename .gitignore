@@ -1,0 +1,11 @@
+# Ignore files with .pyc extension
+*.pyc
+
+# Ignore the 'secret.txt' file
+secret.txt
+
+# Ignore the 'logs/' directory and all its contents
+logs/
+
+#ignore the api_key
+api_key.py
