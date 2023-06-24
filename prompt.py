@@ -38,11 +38,11 @@ def update_conversation(current_message,ai_response,new_prompt):
     refined_message = current_message
     return refined_message
     
-def create_motion():  
+def create_motion():
     #initial the creation of motions based on the initial prompt    
     initial_response = send_message(initial_message)
     #evaluate the response
-    ai_response = print_response(current_response)
+    ai_response = print_response(initial_response)
 
     #a sort of cheapish attempt to choose the best motion available at the time
     new_prompt = 'Now choose the best motion from these five and print it'
@@ -52,6 +52,6 @@ def create_motion():
     ai_response = print_response(current_response)
     
     #At the end we have the newly crafted motion
-    motion = ai_response
+    motion = ai_response.content
     
     return motion
