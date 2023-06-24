@@ -1,9 +1,10 @@
 import openai
 import motionGPTv0_2
+import api_key
 
 # Set up your OpenAI API credentials
 # This key will be deactivated on Github push, don't even try it
-openai.api_key = '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'
+openai.api_key = api_key.api_key
 
 v0_2prompt = motionGPTv0_2.create_prompt()
 
