@@ -9,9 +9,7 @@ openai.api_key = api_key.api_key
 
 v0_2prompt = motionGPTv0_2.create_prompt()
 
-# Define your prompt
-prompt = v0_2prompt
-initial_message = [{"role": "user", "content": prompt}]
+
 
 # Send the message to the API
 def send_message(messages):
@@ -39,6 +37,10 @@ def update_conversation(current_message,ai_response,new_prompt):
     return refined_message
     
 def create_motion():
+    # Define your prompt
+    prompt = v0_2prompt
+    initial_message = [{"role": "user", "content": prompt}]
+    
     #initial the creation of motions based on the initial prompt    
     initial_response = send_message(initial_message)
     #evaluate the response
